@@ -1,20 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-const routerOptions = [
-  { path: '/', component: 'mainview' }
-]
-
-const routes = routerOptions.map(route => {
-  return {
-    ...route,
-    component: () => import(`@/components/${route.component}.vue`)
-  }
-})
+import Adduser from '@/components/add-user'
 
 Vue.use(Router)
 
 export default new Router({
-  routes,
+  routes: [
+    {path: '/add-user', component: Adduser, name: 'Adduser'}
+  ],
   mode: 'history'
 })

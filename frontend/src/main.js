@@ -35,7 +35,9 @@ import('./assets/css/fonts/jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2')
 import('./assets/css/fonts/PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2')
 import('./assets/css/fonts/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2')
 import('./assets/css/fonts/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2')
+import('./assets/css/font-awesome.css')
 
+Vue.use(router)
 Vue.use(Vuetify)
 
 /* eslint-disable no-new */
@@ -44,4 +46,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+}).$mount('#app')
