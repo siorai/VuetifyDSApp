@@ -8,7 +8,7 @@
               <v-container fluid>
                 <v-layout row>
                   <v-flex xs4>
-                    <v-subheader class="grey--text text--lighten-1">Please enter a user name:</v-subheader>
+                    <v-subheader class="grey--text text--lighten-1">Please enter a user name</v-subheader>
                   </v-flex>
                   <v-flex xs8>
                     <v-text-field
@@ -27,7 +27,7 @@
                   <v-flex xs8>
                     <v-text-field
                       prepend-icon="fa-key fa-lg"
-                      name="password"
+                      name="_password"
                       v-model="password"
                       min="8"
                       required
