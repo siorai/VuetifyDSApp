@@ -13,7 +13,7 @@
               <v-icon>dashboard</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>Dashboard</v-list-tile-title>
+              <v-list-tile-title>Start New Survey</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           <v-list-tile>
@@ -21,7 +21,7 @@
               <v-icon>settings</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>Settings</v-list-tile-title>
+              <v-list-tile-title>View Event Metrics</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           <v-list-tile>
@@ -48,7 +48,18 @@
       </v-navigation-drawer>
       <v-toolbar app fixed clipped-left>
         <v-toolbar-side-icon @click.stop="drawer = !drawer" />
-        <v-toolbar-title>DancesafeResults</v-toolbar-title>
+        <v-toolbar-title>Dancesafe Results</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-menu bottom left>
+          <v-btn icon slot="activator" dark>
+            <v-icon>more_vert</v-icon>
+          </v-btn>
+          <v-list>
+            <v-list-tile v-for="option in options" :key="option.title">
+              <v-list-tile-title>{{ option.title }}</v-list-tile-title>
+            </v-list-tile>
+            </v-list>
+        </v-menu>
       </v-toolbar>
       <div class="col-sm-9">
         <router-view/>
@@ -62,6 +73,12 @@ export default {
   name: 'App',
   component: 'add-user',
   data: () => ({
+    options: [
+      { title: 'Login' },
+      { title: 'Logout' },
+      { title: 'New User' },
+      { title: 'User Settings' }
+    ],
     drawer: null
   }),
   props: {
